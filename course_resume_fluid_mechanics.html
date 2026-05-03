@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Resume — Fluid Mechanics & Petroleum Engineering 2025/2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root {
+    --ink: #0f0e0c;
+    --cream: #f5f1ea;
+    --gold: #b8860b;
+    --gold-light: #d4a017;
+    --rust: #8b3a2a;
+    --teal: #1a5c5c;
+    --teal-light: #2a8080;
+    --slate: #2c3550;
+    --rule: #c8b89a;
+    --bg-section: #fdfaf4;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --display: 'Playfair Display', Georgia, serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 300;
+    line-height: 1.75;
+    font-size: 15.5px;
+  }
+
+  /* ── MASTHEAD ── */
+  header {
+    background: var(--slate);
+    color: var(--cream);
+    padding: 3.5rem 4rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 18px,
+      rgba(255,255,255,.03) 18px,
+      rgba(255,255,255,.03) 19px
+    );
+    pointer-events: none;
+  }
+  header .label {
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: .8rem;
+  }
+  header h1 {
+    font-family: var(--display);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: .5rem;
+  }
+  header .sub {
+    font-size: .95rem;
+    color: #a8b4c8;
+    font-style: italic;
+    letter-spacing: .03em;
+  }
+  header .meta {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  header .meta span {
+    font-family: var(--mono);
+    font-size: .72rem;
+    color: #7a8ea8;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  header .meta strong { color: var(--gold-light); }
+
+  /* ── NAV STRIP ── */
+  nav {
+    background: var(--ink);
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--gold);
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    color: #a8b4c8;
+    text-decoration: none;
+    padding: .7rem 1.4rem;
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color .2s, background .2s;
+    border-right: 1px solid #2a2a2a;
+  }
+  nav a:hover { color: var(--gold-light); background: #1a1a1a; }
+
+  /* ── MAIN LAYOUT ── */
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+  }
+
+  /* ── CHAPTER HEADING ── */
+  .chapter {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: .6rem;
+    border-bottom: 2px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  .chapter .num {
+    font-family: var(--mono);
+    font-size: .72rem;
+    color: var(--gold);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .chapter h2 {
+    font-family: var(--display);
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--slate);
+  }
+
+  /* ── SECTION ── */
+  .section {
+    margin-bottom: 2rem;
+  }
+  .section h3 {
+    font-family: var(--display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: .8rem;
+    padding-left: .8rem;
+    border-left: 3px solid var(--teal-light);
+  }
+  .section h4 {
+    font-family: var(--serif);
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--rust);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin: 1rem 0 .4rem;
+  }
+
+  p { margin-bottom: .6rem; }
+
+  /* ── FORMULA BOX ── */
+  .formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .formula {
+    background: var(--bg-section);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: .9rem 1.1rem;
+  }
+  .formula .name {
+    font-family: var(--mono);
+    font-size: .7rem;
+    color: var(--gold);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: .35rem;
+  }
+  .formula .eq {
+    font-family: var(--mono);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--slate);
+    margin-bottom: .35rem;
+  }
+  .formula .desc {
+    font-size: .82rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* ── KEY CONCEPT BOX ── */
+  .key-box {
+    background: linear-gradient(135deg, #e8f4f4 0%, #f0e8d8 100%);
+    border: 1px solid var(--teal-light);
+    border-radius: 6px;
+    padding: 1.1rem 1.4rem;
+    margin: 1rem 0;
+    position: relative;
+  }
+  .key-box::before {
+    content: '★ KEY';
+    position: absolute;
+    top: -10px; left: 1rem;
+    background: var(--teal);
+    color: white;
+    font-family: var(--mono);
+    font-size: .6rem;
+    letter-spacing: .15em;
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+
+  /* ── WARNING / IMPORTANT BOX ── */
+  .warn-box {
+    background: #fef5e7;
+    border: 1px solid #e8a020;
+    border-left: 4px solid #e8a020;
+    border-radius: 4px;
+    padding: .9rem 1.1rem;
+    margin: 1rem 0;
+    font-size: .9rem;
+  }
+  .warn-box strong { color: #9a5a00; }
+
+  /* ── STRATEGY BOX ── */
+  .strategy {
+    background: var(--slate);
+    color: var(--cream);
+    border-radius: 6px;
+    padding: 1.2rem 1.5rem;
+    margin: 1.2rem 0;
+  }
+  .strategy .strat-title {
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: .7rem;
+  }
+  .strategy ol, .strategy ul {
+    padding-left: 1.3rem;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+  .strategy li { margin-bottom: .3rem; }
+  .strategy code {
+    background: rgba(255,255,255,.12);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--mono);
+    font-size: .85em;
+  }
+
+  /* ── EXERCISE BLOCK ── */
+  .exercise {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: 3px solid var(--rust);
+    border-radius: 4px;
+    padding: 1rem 1.3rem;
+    margin: 1.2rem 0;
+  }
+  .exercise .ex-label {
+    font-family: var(--mono);
+    font-size: .68rem;
+    color: var(--rust);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+  .exercise .ex-q {
+    font-weight: 400;
+    font-size: .92rem;
+    margin-bottom: .7rem;
+    color: #222;
+  }
+  .exercise .solution {
+    background: #f9f9f9;
+    border-left: 3px solid #4caf82;
+    padding: .7rem 1rem;
+    margin-top: .5rem;
+    border-radius: 0 4px 4px 0;
+  }
+  .exercise .sol-label {
+    font-family: var(--mono);
+    font-size: .63rem;
+    color: #2a7a50;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: .4rem;
+  }
+  .exercise .solution p, .exercise .solution li {
+    font-size: .88rem;
+    color: #333;
+  }
+  .exercise .solution ol, .exercise .solution ul {
+    padding-left: 1.2rem;
+  }
+  .exercise .solution li { margin-bottom: .2rem; }
+
+  /* ── TABLE ── */
+  .tbl-wrap { overflow-x: auto; margin: 1rem 0; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: .88rem;
+  }
+  th {
+    background: var(--slate);
+    color: var(--cream);
+    padding: .55rem 1rem;
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  td {
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #e2ddd4;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #faf7f2; }
+  td:first-child { font-weight: 600; color: var(--teal); }
+
+  /* ── BULLET LISTS ── */
+  ul.clean, ol.clean {
+    padding-left: 1.3rem;
+    margin: .5rem 0 .8rem;
+  }
+  ul.clean li, ol.clean li {
+    margin-bottom: .25rem;
+    line-height: 1.6;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2rem 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: #666;
+    text-align: center;
+    padding: 1.5rem;
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .08em;
+  }
+
+  /* ── INLINE CODE ── */
+  code {
+    font-family: var(--mono);
+    background: #eee;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: .88em;
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 2rem 1.5rem; }
+    main { padding: 2rem 1rem; }
+    .formula-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="label">Course Resume · 2025 / 2026</div>
+  <h1>Fluid Mechanics &amp; Petroleum Engineering</h1>
+  <p class="sub">National Higher School of Mathematics — Prof. M. Djebli (NHSM &amp; USTHB)</p>
+  <div class="meta">
+    <span>Chapter I — <strong>Navier-Stokes</strong></span>
+    <span>Chapter II — <strong>Sedimentary Geology</strong></span>
+    <span>Chapter III — <strong>Petroleum Exploitation</strong></span>
+    <span>Chapter IV — <strong>Porous Media &amp; Darcy's Law</strong></span>
+    <span>Chapter V — <strong>Flow in Heterogeneous Media</strong></span>
+  </div>
+</header>
+
+<nav>
+  <a href="#ch1">I · Navier-Stokes</a>
+  <a href="#ch2">II · Sedimentary</a>
+  <a href="#ch3">III · Petroleum Chain</a>
+  <a href="#ch4">IV · Porous Media</a>
+  <a href="#ch4b">IV · Darcy's Law</a>
+  <a href="#ch5">V · Heterogeneous Flow</a>
+  <a href="#exercises">Exercises</a>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- CHAPTER I — NAVIER-STOKES                         -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="chapter" id="ch1">
+  <span class="num">Chapter I</span>
+  <h2>Navier-Stokes Equations — Fluid Mechanics</h2>
+</div>
+
+<div class="section">
+  <h3>1. Conservation Laws (Derivation Starting Point)</h3>
+  <p>Everything starts from two integral conservation laws applied to a material control volume V(t):</p>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Mass Conservation</div>
+      <div class="eq">∂ρ/∂t + ∇·(ρu) = 0</div>
+      <div class="desc">Continuity equation. For incompressible flow: ∇·u = 0 (divergence-free velocity field).</div>
+    </div>
+    <div class="formula">
+      <div class="name">Momentum Conservation</div>
+      <div class="eq">ρ Du/Dt = ∇·σ + ρf</div>
+      <div class="desc">σ = Cauchy stress tensor. f = body force per unit mass (e.g. gravity). D/Dt = material derivative.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>2. Newtonian Constitutive Relation &amp; Full N-S Equation</h3>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Stress Decomposition</div>
+      <div class="eq">σ = −pI + τ</div>
+      <div class="desc">p = thermodynamic pressure; τ = viscous stress tensor.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Newtonian Viscous Stress</div>
+      <div class="eq">τ = 2μS + λ(∇·u)I</div>
+      <div class="desc">S = ½(∇u + (∇u)ᵀ) = strain-rate tensor. μ = dynamic viscosity, λ = second viscosity.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Full Navier-Stokes</div>
+      <div class="eq">ρ Du/Dt = −∇p + μ∇²u + (μ+λ)∇(∇·u) + ρf</div>
+      <div class="desc">General form for a compressible Newtonian fluid with constant μ, λ.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Incompressible N-S</div>
+      <div class="eq">ρ(∂u/∂t + u·∇u) = −∇p + μ∇²u + ρf</div>
+      <div class="desc">The most-used form: ∇·u = 0 eliminates the compressibility term. This is what most exercises use.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>3. Energy Conservation &amp; Bernoulli Equation</h3>
+  <p>Taking the scalar product of the incompressible N-S momentum equation with <strong>u</strong> and manipulating identities gives the kinetic energy equation. In the inviscid, steady-state, incompressible limit with a conservative body force <strong>f = −∇Φ</strong>:</p>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Bernoulli (along a streamline)</div>
+      <div class="eq">p + ½ρ|u|² + ρgz = const</div>
+      <div class="desc">Valid for: inviscid (μ=0), steady, incompressible, conservative body forces. Used for pipes, nozzles, manometers.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Viscous Dissipation</div>
+      <div class="eq">τ:∇u = 2μ S:S ≥ 0</div>
+      <div class="desc">Always positive for Newtonian fluids — irreversible conversion of mechanical energy to heat.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>4. Boundary &amp; Initial Conditions</h3>
+  <ul class="clean">
+    <li><strong>No-slip:</strong> u = u_wall on solid surfaces (most common in exercises).</li>
+    <li><strong>Initial condition:</strong> u(x, 0) = u₀(x) for time-dependent problems.</li>
+    <li><strong>Traction (open boundary):</strong> σ·n = T on inflow/outflow surfaces.</li>
+    <li><strong>Periodic or far-field:</strong> used in channel flow / external flow problems.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>5. Nondimensionalization &amp; Reynolds Number</h3>
+  <p>Choose characteristic length <em>L</em> and velocity <em>U</em>. The dimensionless incompressible N-S becomes:</p>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Dimensionless N-S</div>
+      <div class="eq">∂u/∂t + u·∇u = −∇p + (1/Re)∇²u + f*</div>
+      <div class="desc">All variables are now dimensionless. Re governs the ratio of inertia to viscosity.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Reynolds Number</div>
+      <div class="eq">Re = ρUL / μ</div>
+      <div class="desc">Re ≪ 1 → viscous (laminar, Stokes flow). Re ≫ 1 → inertia-dominated (turbulent). Darcy's Law valid for Re &lt; 1.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>6. Classical Exact Solutions (must know)</h3>
+
+  <h4>Plane Couette Flow — shear-driven</h4>
+  <p>Two parallel plates at y=0 (stationary) and y=h (moving at speed U). Governing equation: <code>0 = μ d²u/dy²</code> with <code>u(0)=0, u(h)=U</code>.</p>
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Couette Velocity Profile</div>
+      <div class="eq">u(y) = (U/h) · y</div>
+      <div class="desc">Linear profile. No pressure gradient needed. Shear stress τ = μU/h = constant throughout.</div>
+    </div>
+  </div>
+
+  <h4>Plane Poiseuille Flow — pressure-driven</h4>
+  <p>Two fixed plates. Constant pressure gradient −dp/dx drives the flow. Governing equation: <code>0 = −dp/dx + μ d²u/dy²</code>.</p>
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Poiseuille Velocity Profile</div>
+      <div class="eq">u(y) = (1/2μ)(−dp/dx) · y(h−y)</div>
+      <div class="desc">Parabolic profile. Maximum at centerline y=h/2: u_max = (h²/8μ)(−dp/dx). Mean velocity = (2/3) u_max.</div>
+    </div>
+  </div>
+
+  <div class="key-box">
+    <strong>Strategy for N-S exercises:</strong> (1) Identify what drives the flow — shear or pressure gradient? (2) Choose which terms vanish (steady → ∂/∂t=0; fully developed → u·∇u=0; no body force → f=0). (3) Integrate twice; apply boundary conditions to find integration constants. (4) Check energy: does Bernoulli apply? (inviscid + steady + streamline).
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise · Navier-Stokes — Building Pressure</div>
+  <div class="ex-q">A drinking-water pipeline has pressure 2.758 bar on the ground floor. What is the maximum height the water can reach?</div>
+  <div class="solution">
+    <div class="sol-label">Solution — Bernoulli (static fluid, u=0)</div>
+    <ol>
+      <li>Bernoulli: p₁ + ρgz₁ = p₂ + ρgz₂. At max height, pressure = p_atm = 1.013×10⁵ Pa and u=0.</li>
+      <li>p₁ = 2.758 bar = 2.758×10⁵ Pa; p₂ = 1.013×10⁵ Pa; Δp = 1.745×10⁵ Pa.</li>
+      <li>h = Δp / (ρg) = 1.745×10⁵ / (1000 × 9.81) ≈ <strong>17.8 m</strong></li>
+    </ol>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise · Venturi Meter</div>
+  <div class="ex-q">Water at 20°C flows through a Venturi tube. Pressure at throat is 2 atm below inlet pressure. Inlet velocity = 0.6 m/s. Find throat velocity.</div>
+  <div class="solution">
+    <div class="sol-label">Solution — Bernoulli + Continuity</div>
+    <ol>
+      <li>Bernoulli between inlet (1) and throat (2): p₁ + ½ρv₁² = p₂ + ½ρv₂²</li>
+      <li>Rearrange: ½ρ(v₂²−v₁²) = p₁−p₂ = 2 atm = 2×101325 = 202650 Pa</li>
+      <li>v₂² = 2×202650/1000 + (0.6)² = 405.30 + 0.36 = 405.66 → v₂ ≈ <strong>20.14 m/s</strong></li>
+    </ol>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- CHAPTER II — SEDIMENTARY GEOLOGY                  -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="chapter" id="ch2">
+  <span class="num">Chapter II</span>
+  <h2>Sedimentary Geology &amp; Petroleum Systems</h2>
+</div>
+
+<div class="section">
+  <h3>1. Rock Classification</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Type</th><th>Formation</th><th>Sub-types</th><th>Relevance</th></tr>
+      <tr><td>Igneous</td><td>Cooling of magma/lava</td><td>Intrusive (granite), Extrusive (basalt)</td><td>&lt;1% of petroleum</td></tr>
+      <tr><td>Sedimentary</td><td>Compaction of sediments</td><td>Clastic (sandstone), Chemical (limestone), Organic (coal)</td><td>~99% of petroleum</td></tr>
+      <tr><td>Metamorphic</td><td>Heat + pressure without melting</td><td>Foliated (schist), Non-foliated (marble)</td><td>Rare, by migration only</td></tr>
+    </table>
+  </div>
+  <p><strong>Why sedimentary dominates:</strong> Sedimentary environments allow organic matter to accumulate, be preserved, and undergo thermal transformation into hydrocarbons over millions of years.</p>
+</div>
+
+<div class="section">
+  <h3>2. The Petroleum System — Four Essential Elements</h3>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">1. Source Rock</div>
+      <div class="eq">Kerogen → Heat → Oil/Gas</div>
+      <div class="desc">Organic-rich sedimentary rock (shale, mudstone, coal). Thermal maturation of kerogen at depth generates hydrocarbons. Key metric: Total Organic Carbon (TOC).</div>
+    </div>
+    <div class="formula">
+      <div class="name">2. Reservoir Rock</div>
+      <div class="eq">High φ + High k</div>
+      <div class="desc">Porous and permeable rock storing hydrocarbons after migration. Examples: sandstone, limestone, dolomite. Characterized by porosity φ and permeability k.</div>
+    </div>
+    <div class="formula">
+      <div class="name">3. Seal / Cap Rock</div>
+      <div class="eq">k ≈ 0, impermeable</div>
+      <div class="desc">Overlying impermeable layer (shale, salt, anhydrite) preventing upward hydrocarbon leakage. Structural integrity is critical.</div>
+    </div>
+    <div class="formula">
+      <div class="name">4. Trap</div>
+      <div class="eq">Closed geometry</div>
+      <div class="desc">Structural traps (anticlines, faults, domes) or stratigraphic traps (pinch-outs, reefs, unconformities). Prevents further migration and allows economic accumulation.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>3. Petroleum System Processes</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Process</th><th>Definition</th><th>Mechanism / Driving Force</th></tr>
+      <tr><td>Generation</td><td>Conversion of organic matter → hydrocarbons</td><td>Thermal maturation of kerogen; burial depth, temperature history, geological time</td></tr>
+      <tr><td>Migration</td><td>Movement from source → reservoir</td><td>Pressure gradients, buoyancy (oil/gas less dense than water), rock compaction — primary (short range) then secondary (through permeable pathways/faults)</td></tr>
+      <tr><td>Accumulation</td><td>Concentration in reservoir</td><td>Buoyancy-driven upward migration blocked by seal; requires porous reservoir + effective trap geometry</td></tr>
+      <tr><td>Preservation</td><td>Long-term retention</td><td>Seal continuity, basin stability, limited faulting/erosion, minimal uplift</td></tr>
+    </table>
+  </div>
+  <div class="warn-box"><strong>Key Rule:</strong> All four elements AND all four processes must be present and properly timed geologically. Missing any one element means no petroleum accumulation.</div>
+</div>
+
+<div class="section">
+  <h3>4. Sedimentary Basins</h3>
+  <ul class="clean">
+    <li>Regions of long-term subsidence where sediments accumulate (Paleozoic → Cenozoic).</li>
+    <li>Formed by tectonic compression or extension; classified by Paleozoic (540 MYA), Mesozoic (250 MYA), Cenozoic (65 MYA) eras.</li>
+    <li>Reservoir structure types along continental slopes: by-pass channels, confined channel complexes, weakly-confined complexes, lobes.</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- CHAPTER III — PETROLEUM EXPLOITATION              -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="chapter" id="ch3">
+  <span class="num">Chapter III</span>
+  <h2>Petroleum Exploitation — The Petroleum Chain</h2>
+</div>
+
+<div class="section">
+  <h3>1. The Three Sectors</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Sector</th><th>Activity</th><th>Key Operations</th></tr>
+      <tr><td>Upstream (E&amp;P)</td><td>Exploration &amp; Production</td><td>Seismic surveys (2D/3D/4D), geological mapping, prospect evaluation, vertical/directional drilling, mud circulation, casing &amp; cementing, artificial lift (ESP, gas lift, pump jack), Enhanced Oil Recovery (EOR)</td></tr>
+      <tr><td>Midstream</td><td>Transport &amp; Storage</td><td>Pipelines (crude oil, gas), LNG carriers, marine tankers, rail/truck; storage in tank farms, underground salt caverns, floating units; gas processing: H₂S removal, CO₂ removal, NGL extraction</td></tr>
+      <tr><td>Downstream</td><td>Refining &amp; Distribution</td><td>Atmospheric &amp; vacuum distillation; catalytic cracking, hydrocracking, reforming; hydrotreating (sulfur removal); products: gasoline, diesel, jet fuel, LPG, petrochemicals</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <h3>2. Exploration — How to Find Reservoirs</h3>
+  <p>Applied/subsurface geophysics uses electronic instruments to measure Earth's subsurface properties (density, electrical resistivity, magnetic permeability):</p>
+  <ul class="clean">
+    <li><strong>Seismic reflection:</strong> 2D/3D/4D surveys detect subsurface structure by measuring reflected acoustic waves.</li>
+    <li><strong>Basin analysis &amp; petroleum system modeling:</strong> Reconstructs burial history, heat flow, and maturation timing.</li>
+    <li><strong>Risk assessment:</strong> Evaluates probability of the four elements being simultaneously present.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>3. Reservoir Engineering — Core Parameters</h3>
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Key Parameters</div>
+      <div class="eq">φ (%), k (mD), P, T, PVT</div>
+      <div class="desc">Porosity φ, Permeability k in millidarcies, Pressure P, Temperature T, Fluid properties via PVT analysis.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Material Balance</div>
+      <div class="eq">N_p = f(ΔP_reservoir)</div>
+      <div class="desc">Cumulative oil production Nₚ as a function of reservoir pressure decline. Goal: maximize recovery factor while maintaining economic viability.</div>
+    </div>
+  </div>
+
+  <h4>Flow Assurance Issues (Midstream)</h4>
+  <ul class="clean">
+    <li><strong>Hydrate formation:</strong> Gas + water at high pressure/low temperature → solid plugs in pipelines.</li>
+    <li><strong>Wax deposition:</strong> Paraffin waxes precipitate as crude cools.</li>
+    <li><strong>Corrosion:</strong> H₂S and CO₂ attack steel pipelines.</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- CHAPTER IV — POROUS MEDIA PROPERTIES              -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="chapter" id="ch4">
+  <span class="num">Chapter IV — Part A</span>
+  <h2>Porous Rocks &amp; Fluid Properties</h2>
+</div>
+
+<div class="section">
+  <h3>1. Fundamental Definitions</h3>
+
+  <div class="key-box">
+    <strong>Continuum Hypothesis (REV):</strong> We treat the complex pore network as an average medium at a macroscopic scale. The Representative Elementary Volume (REV) must be: V ≫ pore scale AND V ≪ domain scale — so that measured properties become scale-invariant.
+  </div>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Total (Geometric) Porosity</div>
+      <div class="eq">φ = Vₚ / Vᵧ = Vₚ / (Vₚ + Vₛ)</div>
+      <div class="desc">Dimensionless, 0 &lt; φ &lt; 1. Typical: sandstone ≈ 0.20, soil ≈ 0.30, granite ≈ 0.05. NOT sufficient alone to describe flow — need connectivity.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Effective (Connected) Porosity</div>
+      <div class="eq">ε = Vₚ꜀ / Vₜ = φ · η</div>
+      <div class="desc">Only interconnected pores contribute to flow. η = Vf/Vp = saturation coefficient. Flow depends on connected pores, not total pores.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Void Ratio (Soil Mechanics)</div>
+      <div class="eq">e = Vₚ / Vₛ = φ / (1 − φ)</div>
+      <div class="desc">Common in geotechnical engineering. Related to porosity: φ = e/(1+e).</div>
+    </div>
+    <div class="formula">
+      <div class="name">Specific Surface Area</div>
+      <div class="eq">a = Aₚ / Vᵧ   [m⁻¹]</div>
+      <div class="desc">Pore surface per unit bulk volume. Important for adsorption and catalytic reactions. For spheres: Sv = 3(1−φ)/r.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Tortuosity</div>
+      <div class="eq">τ = (Lₑ / L)²  ≥ 1</div>
+      <div class="desc">Accounts for winding pore paths. Lₑ = effective path length, L = straight-line length. Reduces effective permeability.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Intrinsic Permeability</div>
+      <div class="eq">k = −μ Uᴅ / ∇P   [m²]</div>
+      <div class="desc">Property of pore geometry only — independent of fluid. 1 Darcy ≈ 10⁻¹² m². Sandstone: 0.1–1000 mD; Shale: 10⁻⁵–10 mD; Clean sand: 1000–10,000 mD.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Hydraulic Conductivity</div>
+      <div class="eq">K = k · ρ_f · g / μ   [m/s]</div>
+      <div class="desc">Combines pore geometry AND fluid properties. Used in hydrology. K = k·ρg/μ ties to Darcy velocity via q = −K∇h.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Transmissibility</div>
+      <div class="eq">T = k · A / (μ · L)</div>
+      <div class="desc">Lumped parameter combining permeability, geometry, and fluid viscosity. Units: m³/(Pa·s) or m³·s/kg.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>2. Porous Media Types</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Type</th><th>Examples</th><th>Permeability</th></tr>
+      <tr><td>Natural (geological)</td><td>Sandstone, limestone, fractured rocks, soil</td><td>Highly variable (mD to D)</td></tr>
+      <tr><td>Aquifer</td><td>Water-saturated porous/permeable rock; bounded by clay (impermeable)</td><td>Moderate-high</td></tr>
+      <tr><td>Hydrocarbon reservoir</td><td>Oil/gas + connate water; requires cap rock seal</td><td>High (for production)</td></tr>
+      <tr><td>Artificial</td><td>Concrete, filters, fiber composites, unconsolidated sand</td><td>Engineered</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <h3>3. Porosity from Density Data</h3>
+  <p>Given bulk density ρ_bulk and grain density ρ_grain:</p>
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Porosity from Density</div>
+      <div class="eq">φ = 1 − ρ_bulk / ρ_grain</div>
+      <div class="desc">Also: Vs = Mass/ρs; Vp = VT − Vs; φ = Vp/VT. Standard approach in lab measurements.</div>
+    </div>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise I — Porosity &amp; Void Ratio</div>
+  <div class="ex-q">Dry soil sample: total volume Vᵧ = 500 cm³, mass = 800 g, grain density ρₛ = 2.65 g/cm³. Calculate φ and void ratio e.</div>
+  <div class="solution">
+    <div class="sol-label">Solution (from slides, exact values)</div>
+    <ol>
+      <li>Volume of solids: Vₛ = 800 / 2.65 ≈ <strong>301.89 cm³</strong></li>
+      <li>Pore volume: Vₚ = 500 − 301.89 = <strong>198.11 cm³</strong></li>
+      <li>Porosity: φ = 198.11 / 500 = <strong>0.396 (39.6%)</strong></li>
+      <li>Void ratio: e = 198.11 / 301.89 = <strong>0.656</strong></li>
+    </ol>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise I (Exercises sheet) — Sandstone Core</div>
+  <div class="ex-q">Sandstone core plug: bulk volume Vb = 25.0 cm³. Mercury porosimetry: connected pore volume = 5.5 cm³, isolated pore volume = 0.7 cm³. Calculate φT, φe, and φe/φT.</div>
+  <div class="solution">
+    <div class="sol-label">Solution</div>
+    <ol>
+      <li>Total porosity: φT = (5.5 + 0.7)/25.0 = 6.2/25.0 = <strong>0.248 (24.8%)</strong></li>
+      <li>Effective porosity: φe = 5.5/25.0 = <strong>0.220 (22.0%)</strong></li>
+      <li>Ratio: φe/φT = 5.5/6.2 = <strong>0.887</strong> — 88.7% of pores are connected. Effective porosity is what matters for flow.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise II — Granular Pack</div>
+  <div class="ex-q">Spheres of radius r = 0.15 mm; ρ_bulk = 1.68 g/cm³; ρ_grain = 2.65 g/cm³. (1) Compute φ. (2) Derive Sv in terms of r and φ. Evaluate numerically. (3) Hydraulic radius rh = φ/Sv — calculate and compare to r.</div>
+  <div class="solution">
+    <div class="sol-label">Solution</div>
+    <ol>
+      <li>φ = 1 − 1.68/2.65 = 1 − 0.634 = <strong>0.366 (36.6%)</strong></li>
+      <li>For a pack of spheres: Sv = (surface of spheres per unit bulk volume) = 3(1−φ)/r = 3×0.634/0.15×10⁻³ = <strong>12,680 m⁻¹</strong></li>
+      <li>rh = φ/Sv = 0.366/12680 = 2.89×10⁻⁵ m = <strong>0.029 mm</strong> ≈ r/5.2. The hydraulic radius is about 5× smaller than grain radius — flow channels are narrower than grain size.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- CHAPTER IV-B — DARCY'S LAW                        -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="chapter" id="ch4b">
+  <span class="num">Chapter IV — Part B</span>
+  <h2>Darcy's Law &amp; Flow in Porous Media</h2>
+</div>
+
+<div class="section">
+  <h3>1. Darcy's Experiment (1856)</h3>
+  <p>Henry Darcy's sand-filter experiment measured: flow rate Q, cross-sectional area A, head difference Δh = h₁ − h₂, length L. He found empirically:</p>
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Darcy's Empirical Law</div>
+      <div class="eq">Q = K · A · (Δh / L)</div>
+      <div class="desc">Q proportional to A, to Δh, and inversely to L. K = hydraulic conductivity [m/s]. Valid for laminar, low Re flow.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>2. Darcy's Law — General Formulations</h3>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Darcy Velocity (specific discharge)</div>
+      <div class="eq">q = Q/A = −K · (Δh/ΔL)</div>
+      <div class="desc">q [m/s] is NOT the real fluid velocity. It is flow per unit total cross-sectional area, including solid phase.</div>
+    </div>
+    <div class="formula">
+      <div class="name">In Terms of Pressure</div>
+      <div class="eq">q = −(k/μ)∇p = −K∇(p + ρ_f gz)</div>
+      <div class="desc">Full form including gravity. The hydraulic head h = p/(ρg) + z combines pressure and elevation heads.</div>
+    </div>
+    <div class="formula">
+      <div class="name">1D with Gravity (vertical)</div>
+      <div class="eq">q = −(k/μ)(dp/dl + ρg/(1.0133×10⁶) · dz/dl)</div>
+      <div class="desc">Form used in petroleum engineering with Darcy units. The factor 1.0133×10⁶ converts atm to dyn/cm² (cgs system).</div>
+    </div>
+    <div class="formula">
+      <div class="name">Interstitial (Actual) Velocity</div>
+      <div class="eq">v = q / φ</div>
+      <div class="desc">Real average fluid velocity through connected pore space. Always v &gt; q since φ &lt; 1. Critical distinction in transport problems.</div>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <strong>IMPORTANT:</strong> Darcy velocity q is NOT the actual fluid velocity. The actual interstitial velocity is v = q/φ, which is always larger. This distinction matters in tracer/contaminant transport calculations.
+  </div>
+</div>
+
+<div class="section">
+  <h3>3. Validity &amp; Limitations of Darcy's Law</h3>
+  <ul class="clean">
+    <li>Valid only in the <strong>laminar regime</strong> (Re &lt; ~1 based on grain size).</li>
+    <li>Gives a <strong>linear</strong> relationship between flux and pressure gradient.</li>
+    <li>Breaks down at high velocities → Forchheimer equation adds a quadratic inertia term.</li>
+    <li>Not applicable to gas flow at very low pressures (Klinkenberg effect).</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>4. Unit Systems — Darcy Units</h3>
+  <p>Dimensional analysis of Darcy's Law <code>u = −(k/μ)(dΦ/dl)</code> in absolute cgs units gives:</p>
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Permeability Unit</div>
+      <div class="eq">1 Darcy ≈ 10⁻⁸ cm² = 10⁻¹² m²</div>
+      <div class="desc">Conversions: 1 atm = 1.0133×10⁶ dyn/cm²; 1 cp = 10⁻² P. 1 Darcy: flow of 1 cp fluid at 1 cm/s under 1 atm/cm gradient through 1 cm² area.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Field Unit Form (petroleum)</div>
+      <div class="eq">q(stb/d) = 1.127×10⁻³ k(mD)·A(ft²)·Δp(psi) / [μ(cp)·Bo·L(ft)]</div>
+      <div class="desc">Bo = formation volume factor [rb/stb]. Used directly in reservoir engineering calculations.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>5. Micro-Macro Link — Poiseuille vs Darcy</h3>
+  <p>Treating the porous medium as a bundle of capillary tubes of radius R:</p>
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Poiseuille (microscale)</div>
+      <div class="eq">v_avg = (R²ρg / 8μ) · (Δh/L)</div>
+      <div class="desc">Average velocity in a single capillary tube — derived from N-S with no-slip. This is the pore-scale foundation of Darcy's Law.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Permeability from Pore Size</div>
+      <div class="eq">k = φR² / (8τ)</div>
+      <div class="desc">k ∝ R² — doubling pore diameter quadruples permeability! Tortuosity τ reduces k. This is the Carman-Kozeny model linkage.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>6. Kozeny-Carman Equation</h3>
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Kozeny-Carman</div>
+      <div class="eq">k = φ³ / (τ · C · Sv²)</div>
+      <div class="desc">C = Kozeny constant (≈ 2 for circular tubes). Sv = specific surface area [m⁻¹]. Connects pore geometry to permeability. Used to estimate k from φ and grain size.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>7. Layered Systems — Equivalent Permeability</h3>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">Perpendicular Flow (Series)</div>
+      <div class="eq">L/k_eq = L₁/k₁ + L₂/k₂ + …</div>
+      <div class="desc">Harmonic mean, weighted by thickness. Dominated by the LOW-permeability layer. Analogous to resistors in series.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Parallel Flow</div>
+      <div class="eq">k_eq = (k₁L₁ + k₂L₂ + …) / (L₁+L₂+…)</div>
+      <div class="desc">Arithmetic mean, weighted by thickness. Dominated by the HIGH-permeability layer. Analogous to resistors in parallel.</div>
+    </div>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise 1 — Simple Darcy (slides)</div>
+  <div class="ex-q">Vertical sandstone column L=1m, k=10⁻¹¹ m², μ=10⁻³ Pa·s (water at 20°C), ρ=1000 kg/m³, g=9.81 m/s², Δp=1000 Pa. Find K, q, and Q for A=0.01 m².</div>
+  <div class="solution">
+    <div class="sol-label">Solution (exact from slides)</div>
+    <ol>
+      <li>K = kρg/μ = 10⁻¹¹ × 1000 × 9.81 / 10⁻³ = <strong>9.81 × 10⁻⁵ m/s</strong></li>
+      <li>q = −(k/μ)(Δp/L) = 9.81×10⁻⁵ × 1000/1 = <strong>0.0981 m/s</strong></li>
+      <li>Q = q × A = 0.0981 × 0.01 = <strong>9.81 × 10⁻⁴ m³/s ≈ 0.98 L/s</strong></li>
+    </ol>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise 2 — Horizontal Pipe (slides)</div>
+  <div class="ex-q">Horizontal pipe, A=10 cm²=10⁻³ m², K=10⁻³ m/s, pressure drop = 2 m of water over L=1 m. Find Q.</div>
+  <div class="solution">
+    <div class="sol-label">Solution</div>
+    <ol>
+      <li>Hydraulic gradient: Δh/L = 2/1 = 2</li>
+      <li>Q = K·A·(Δh/L) = 10⁻³ × 10⁻³ × 2 = 2 × 10⁻⁶ m³/s = <strong>2 cm³/s</strong></li>
+    </ol>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise 3 — Layered Reservoir (slides)</div>
+  <div class="ex-q">Two layers in series: Layer A (L₁=5m, k₁=100 mD), Layer B (L₂=10m, k₂=10 mD). Find equivalent permeability for (a) perpendicular flow and (b) parallel flow.</div>
+  <div class="solution">
+    <div class="sol-label">Solution (exact from slides)</div>
+    <ol>
+      <li><strong>Perpendicular (series):</strong> k_eq = 15/(5/100 + 10/10) = 15/(0.05 + 1.0) = 15/1.05 = <strong>14.29 mD</strong> — dominated by low-k layer B.</li>
+      <li><strong>Parallel:</strong> k_eq = (100×5 + 10×10)/15 = (500+100)/15 = 600/15 = <strong>40 mD</strong> — dominated by high-k layer A.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise IV (Exercises sheet) — Darcy Units</div>
+  <div class="ex-q">Water (μ=1.00 cp, ρ=1.00 g/cm³) flows horizontally through sandpack: L=50 cm, A=12 cm², p₁=3.50 atm, p₂=1.00 atm, k=0.250 Darcy. (a) Calculate q in cm³/s. (b) Convert to field units (stb/d).</div>
+  <div class="solution">
+    <div class="sol-label">Solution</div>
+    <ol>
+      <li>In Darcy units: u = k/μ × Δp/L = 0.250/1.00 × (3.50−1.00)/50 = 0.250 × 0.05 = <strong>0.01250 cm/s</strong></li>
+      <li>q = u × A = 0.01250 × 12 = <strong>0.150 cm³/s</strong></li>
+      <li>To stb/d: 0.150 cm³/s × 86400 s/d ÷ 158,987 cm³/bbl × (1/Bo) → with Bo≈1: ≈ <strong>0.0814 stb/d</strong></li>
+    </ol>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise V — Vertical Core with Gravity</div>
+  <div class="ex-q">Vertical core plug (length 5 cm, diameter 2.54 cm), oil: μ=3.5 cp, ρ=0.82 g/cm³, k=150 mD. Flow directed downward; +z upward. p_top=2.00 atm, p_bottom=1.50 atm. (a) Write full Darcy velocity including gravity. (b) Calculate u and q. (c) Does gravity aid or oppose pressure-driven flow?</div>
+  <div class="solution">
+    <div class="sol-label">Solution</div>
+    <ol>
+      <li>Full expression: u = −(k/μ)[dp/dl + ρg/(1.0133×10⁶) · dz/dl]</li>
+      <li>Take downward as positive flow direction (dl is downward, dz/dl = −1 since z increases upward).</li>
+      <li>dp/dl = (p_bottom − p_top)/L = (1.50−2.00)/5 = −0.10 atm/cm (pressure increases upward, decreases downward)</li>
+      <li>Gravity term: ρg/(1.0133×10⁶) × (−1) = −0.82×980.7/(1.0133×10⁶) = −7.94×10⁻⁴ atm/cm</li>
+      <li>u = −(150×10⁻³/3.5)×[−0.10 − 7.94×10⁻⁴] ≈ −(0.04286)×(−0.10079) ≈ <strong>+0.00432 cm/s</strong> (downward)</li>
+      <li>A = π(1.27)² = 5.067 cm²; q = 0.00432 × 5.067 ≈ <strong>0.0219 cm³/s</strong></li>
+      <li>Gravity aids the flow (both pressure gradient and gravity act downward).</li>
+    </ol>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise VII — Field Unit Problem</div>
+  <div class="ex-q">Field engineer measures q=350 stb/d of crude oil (μ=5.0 cp, Bo=1.15 rb/stb) through horizontal reservoir: w=200 ft, h=30 ft, L=800 ft, Δp=120 psi. Using field-unit Darcy Law: q=1.127×10⁻³ k·A·Δp(psi)/[μ·Bo·L]. (a) Solve for k in mD. (b) With k=180 mD, find revised q.</div>
+  <div class="solution">
+    <div class="sol-label">Solution</div>
+    <ol>
+      <li>A = 200×30 = 6000 ft²</li>
+      <li>k = q·μ·Bo·L / (1.127×10⁻³ × A × Δp) = 350 × 5.0 × 1.15 × 800 / (1.127×10⁻³ × 6000 × 120)</li>
+      <li>k = 1,610,000 / 811.44 ≈ <strong>1984 mD ≈ 1.98 D</strong></li>
+      <li>Revised q with k=180 mD: q = 1.127×10⁻³ × 180 × 6000 × 120 / (5.0 × 1.15 × 800) = 145,965.6 / 4600 ≈ <strong>31.7 stb/d</strong></li>
+    </ol>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- CHAPTER V — FLOW IN HETEROGENEOUS MEDIA           -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="chapter" id="ch5">
+  <span class="num">Chapter V</span>
+  <h2>Flow in Inhomogeneous Porous Media (Numerical DE)</h2>
+</div>
+
+<div class="section">
+  <h3>1. Governing Equation for Heterogeneous Permeability</h3>
+  <p>For incompressible flow through a 2D domain Ω = [0,Lx]×[0,Ly] with spatially varying permeability k(x,y) = k₀ e^(αx+βy):</p>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">General Flow Equation</div>
+      <div class="eq">∇·(K∇p) = 0</div>
+      <div class="desc">Derived from Darcy (q=−K∇p) + incompressibility (∇·q=0). K = k(x,y)/μ. This is the governing PDE to solve.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Simplified (exponential k)</div>
+      <div class="eq">∇²p + α∂p/∂x + β∂p/∂y = 0</div>
+      <div class="desc">When k = k₀e^(αx+βy), taking ∇·(K∇p)=0 and dividing by K gives this PDE. α,β are spatial variation constants.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>2. Analytical Solution via Separation of Variables</h3>
+  <p>Assume separable solution p(x,y) = X(x)·Y(y). Substituting into ∇²p + α∂p/∂x + β∂p/∂y = 0:</p>
+
+  <div class="strategy">
+    <div class="strat-title">Strategy — Separation of Variables</div>
+    <ol>
+      <li>Write p(x,y) = X(x)·Y(y).</li>
+      <li>Divide everything by X·Y to get: <code>X''/X + αX'/X + Y''/Y + βY'/Y = 0</code></li>
+      <li>Set x-dependent part = −λ² and y-dependent part = +λ² (separation constant).</li>
+      <li>X-ODE: X'' + αX' + λ²X = 0 → characteristic roots: r = [−α ± √(α²−4λ²)]/2</li>
+      <li>Y-ODE: Y'' + βY' − λ²Y = 0 → characteristic roots: s = [−β ± √(β²+4λ²)]/2</li>
+      <li>Apply boundary conditions: p(0,y)=p₀, p(Lx,y)=p₁, no-flow at y=0 and y=Ly (∂p/∂y=0).</li>
+      <li>No-flow BC forces Y'(0) = Y'(Ly) = 0 → restricts λ to discrete values: λn = nπ/Ly.</li>
+      <li>For n=0 (uniform in y): X'' + αX' = 0 → X(x) = C₁ + C₂e^(−αx). Apply pressure BCs to get the 1D solution.</li>
+    </ol>
+  </div>
+
+  <div class="formula-grid">
+    <div class="formula">
+      <div class="name">1D Analytical Solution (α≠0)</div>
+      <div class="eq">p(x) = p₀ + (p₁−p₀)(1−e^(−αx))/(1−e^(−αLx))</div>
+      <div class="desc">Valid when α,β≠0 and the flow is essentially 1D (no-flow lateral BCs). For α=β=0: linear pressure profile p(x)=p₀+(p₁−p₀)x/Lx.</div>
+    </div>
+    <div class="formula">
+      <div class="name">Velocity Field</div>
+      <div class="eq">v(x,y) = −(k(x,y)/μ)∇p</div>
+      <div class="desc">Compute after finding p analytically or numerically. Permeability heterogeneity (α,β≠0) bends flow paths away from straight lines.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>3. Numerical Solution — Finite Difference Method</h3>
+
+  <div class="strategy">
+    <div class="strat-title">Strategy — FDM Discretization of ∇·(K∇p) = 0</div>
+    <ol>
+      <li><strong>Grid:</strong> Discretize domain into Nx×Ny cells with spacing Δx, Δy. Node (i,j) at (iΔx, jΔy).</li>
+      <li><strong>Finite difference approximation:</strong> At node (i,j):<br>
+        <code>[K_{i+½}(p_{i+1,j}−p_{i,j}) − K_{i-½}(p_{i,j}−p_{i-1,j})]/Δx² + [similar in y] = 0</code></li>
+      <li><strong>Interface permeability:</strong> Use harmonic mean: K_{i+½} = 2K_i·K_{i+1}/(K_i+K_{i+1}) to preserve flux continuity.</li>
+      <li><strong>Assembly:</strong> Write as linear system Ap = b where A is sparse (pentadiagonal in 2D).</li>
+      <li><strong>Boundary conditions:</strong> Dirichlet (fixed p) → set row to identity + RHS. Neumann (no-flow) → ghost nodes or one-sided difference.</li>
+      <li><strong>Solve:</strong> Use direct solver (LU) for small grids; iterative (conjugate gradient, multigrid) for large grids.</li>
+      <li><strong>Validate:</strong> Compare numerical p(x,y) to analytical solution; compute L∞ and L₂ errors; check convergence as Δx→0.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <h3>4. Key Physical Questions</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Question</th><th>Answer</th></tr>
+      <tr><td>How does permeability heterogeneity affect flow paths?</td><td>High-k zones attract streamlines (preferential flow paths); low-k zones deflect them. Exponential k creates curved, non-uniform flux even with parallel BCs.</td></tr>
+      <tr><td>When does flow become purely 1D?</td><td>When β=0 (no y-variation in k) AND no-flow BCs on top/bottom: pressure becomes uniform in y direction, reducing to 1D flow in x.</td></tr>
+      <tr><td>Special case α=β=0?</td><td>Uniform permeability → ∇²p=0 (Laplace equation) → linear pressure profile, uniform velocity field.</td></tr>
+      <tr><td>Total flow rate through domain</td><td>Q = ∫∫ q·n dA over inlet face = ∫₀^Ly −K(0,y)·(∂p/∂x)|_{x=0} dy. Numerical integration after solving p.</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="exercise">
+  <div class="ex-label">Exercise III — Tortuosity &amp; Kozeny-Carman</div>
+  <div class="ex-q">Tortuosity τ=(Le/L)². Tracer experiment on 10 cm sandpack gives mean transit path length 14.3 cm. (a) Find τ. (b) Using k=φ³/(τCSv²) with C=2, φ=0.30, Sv=1.2×10⁴ m⁻¹, estimate k in m² and convert to millidarcies.</div>
+  <div class="solution">
+    <div class="sol-label">Solution</div>
+    <ol>
+      <li>τ = (Le/L)² = (14.3/10)² = (1.43)² = <strong>2.045</strong></li>
+      <li>k = φ³/(τ·C·Sv²) = (0.30)³ / (2.045 × 2 × (1.2×10⁴)²)</li>
+      <li>k = 0.027 / (2.045 × 2 × 1.44×10⁸) = 0.027 / (5.89×10⁸) = <strong>4.58×10⁻¹¹ m²</strong></li>
+      <li>In millidarcies: 4.58×10⁻¹¹ / 10⁻¹⁵ = 4.58×10⁴ mD = <strong>45,800 mD ≈ 45.8 Darcy</strong> (clean sand range — reasonable)</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SUMMARY STRATEGIES                                -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="chapter" id="exercises">
+  <span class="num">Summary</span>
+  <h2>Master Strategies for Each Problem Type</h2>
+</div>
+
+<div class="section">
+  <h3>Strategy A — Navier-Stokes / Fluid Statics Problems</h3>
+  <div class="strategy">
+    <div class="strat-title">Step-by-Step Approach</div>
+    <ol>
+      <li><strong>Identify the regime:</strong> Static? Steady? Inviscid? Incompressible?</li>
+      <li><strong>Choose the right equation:</strong> Static → hydrostatics (p = ρgh + const). Inviscid + steady → Bernoulli. Viscous + steady, fully developed → Reduced N-S (ODE).</li>
+      <li><strong>For Bernoulli problems:</strong> Identify two points on the same streamline, write p₁+½ρv₁²+ρgz₁ = p₂+½ρv₂²+ρgz₂. Don't forget: both must be on the same streamline, flow must be inviscid and steady.</li>
+      <li><strong>For manometer/pressure problems:</strong> Work from known pressure, going through fluid layers, adding ρgh going down and subtracting going up.</li>
+      <li><strong>For channel flows (Poiseuille/Couette):</strong> Start from N-S, strike out ∂/∂t, u·∇u (fully developed), keep only d²u/dy², integrate twice, apply no-slip BCs.</li>
+      <li><strong>Check units</strong> before finalizing — especially atm vs Pa, bar vs Pa.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Strategy B — Porosity / Permeability Problems</h3>
+  <div class="strategy">
+    <div class="strat-title">Step-by-Step Approach</div>
+    <ol>
+      <li><strong>Porosity from volumes:</strong> Identify VT (bulk), Vs (solid), Vp = VT − Vs. Then φ = Vp/VT. If mass and density given: Vs = m/ρs.</li>
+      <li><strong>Effective vs total porosity:</strong> φT includes isolated pores; φe only connected pores. Only φe matters for flow. For mercury porosimetry: φe = connected pore vol / bulk vol.</li>
+      <li><strong>Permeability from Kozeny-Carman:</strong> k = φ³/(τ·C·Sv²). Calculate Sv from geometry (for spheres: Sv = 3(1−φ)/r). Calculate τ from tracer experiment: τ=(Le/L)².</li>
+      <li><strong>Convert units:</strong> 1 Darcy = 10⁻¹² m²; 1 mD = 10⁻¹⁵ m².</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Strategy C — Darcy's Law Problems</h3>
+  <div class="strategy">
+    <div class="strat-title">Step-by-Step Approach</div>
+    <ol>
+      <li><strong>Identify geometry:</strong> 1D horizontal? Vertical (with gravity)? Layered?</li>
+      <li><strong>Choose unit system:</strong> SI (Pa, m, m²) vs Darcy units (atm, cm, Darcy, cp) vs field units (psi, ft, mD, cp, stb/d).</li>
+      <li><strong>For horizontal 1D:</strong> q = (k/μ)·(Δp/L); Q = q·A. Simple and direct.</li>
+      <li><strong>For vertical flow (gravity matters):</strong> Use full form with gravity term. Determine sign: is gravity aiding or opposing the pressure-driven flow? Check direction of dz/dl relative to flow direction.</li>
+      <li><strong>For layered media:</strong> Perpendicular → harmonic mean (series); Parallel → arithmetic mean (weighted by thickness).</li>
+      <li><strong>Don't confuse q and v:</strong> q = Darcy velocity (per total area); v = q/φ = actual pore velocity.</li>
+      <li><strong>For field units:</strong> Use the formula q(stb/d) = 1.127×10⁻³·k(mD)·A(ft²)·Δp(psi)/[μ(cp)·Bo·L(ft)].</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Strategy D — Heterogeneous Flow / Numerical PDE Problems</h3>
+  <div class="strategy">
+    <div class="strat-title">Step-by-Step Approach</div>
+    <ol>
+      <li><strong>Derive governing PDE:</strong> Start from ∇·q=0 and q=−(k/μ)∇p → ∇·(K∇p)=0 where K=k/μ.</li>
+      <li><strong>Simplify if k is exponential:</strong> k=k₀e^(αx+βy) → divide by K → ∇²p + α∂p/∂x + β∂p/∂y = 0.</li>
+      <li><strong>Analytical route:</strong> Assume p=X(x)·Y(y), substitute, separate into two ODEs, solve each ODE (characteristic equation), apply BCs.</li>
+      <li><strong>Numerical route (FDM):</strong> Discretize domain, use harmonic mean for interface K, assemble sparse linear system Ap=b, apply Dirichlet (pressure) and Neumann (no-flow) BCs, solve, validate vs. analytical.</li>
+      <li><strong>Compute velocity field:</strong> v = −(K/μ)∇p using finite differences on the solved pressure field.</li>
+      <li><strong>Answer qualitative questions:</strong> α,β=0 → homogeneous → 1D linear. β=0 only → 1D but non-linear. α,β≠0 → 2D curved flow paths.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Key Formulas — Quick Reference</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>Formula</th><th>Expression</th><th>When to Use</th></tr>
+      <tr><td>Bernoulli</td><td>p + ½ρv² + ρgz = const</td><td>Inviscid, steady, incompressible, along streamline</td></tr>
+      <tr><td>Poiseuille profile</td><td>u(y)=1/(2μ)(−dp/dx)y(h−y)</td><td>Viscous, pressure-driven channel flow (no-slip both walls)</td></tr>
+      <tr><td>Couette profile</td><td>u(y)=(U/h)y</td><td>Shear-driven, stationary lower wall, moving upper wall</td></tr>
+      <tr><td>Porosity</td><td>φ=Vp/VT</td><td>Any porous medium characterization</td></tr>
+      <tr><td>Effective porosity</td><td>ε=φ·η (η=saturation)</td><td>When isolated pores present; use for flow calculations</td></tr>
+      <tr><td>Tortuosity</td><td>τ=(Le/L)²</td><td>Tracer experiments; correcting permeability models</td></tr>
+      <tr><td>Kozeny-Carman</td><td>k=φ³/(τCSv²)</td><td>Estimating permeability from pore geometry</td></tr>
+      <tr><td>Darcy (general)</td><td>q=−(k/μ)∇(p+ρgz)</td><td>Any single-phase Darcy flow; basis for all petroleum flow</td></tr>
+      <tr><td>Interstitial velocity</td><td>v=q/φ</td><td>Transport/tracer problems; actual particle velocity</td></tr>
+      <tr><td>Hydraulic conductivity</td><td>K=kρg/μ</td><td>Groundwater hydrology; linking k to field K</td></tr>
+      <tr><td>Transmissibility</td><td>T=kA/(μL)</td><td>Lumped reservoir parameter for flow rate prediction</td></tr>
+      <tr><td>Perpendicular k_eq</td><td>L/k_eq=Σ(Li/ki)</td><td>Layered system, flow perpendicular to layers</td></tr>
+      <tr><td>Parallel k_eq</td><td>k_eq=Σ(kiLi)/ΣLi</td><td>Layered system, flow parallel to layers</td></tr>
+      <tr><td>Heterogeneous PDE</td><td>∇²p+α∂p/∂x+β∂p/∂y=0</td><td>Exponential permeability k=k₀e^(αx+βy)</td></tr>
+      <tr><td>Reynolds number</td><td>Re=ρUL/μ</td><td>Laminar/turbulent transition; Darcy valid for Re&lt;1</td></tr>
+      <tr><td>Field unit Darcy</td><td>q=1.127×10⁻³ kAΔp/(μBoL)</td><td>Petroleum reservoir engineering in field units</td></tr>
+    </table>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  NHSM · Prof. M. Djebli · Fluid Mechanics &amp; Petroleum Engineering 2025/2026 · Resume compiled from course materials
+</footer>
+
+</body>
+</html>
